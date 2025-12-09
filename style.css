@@ -62,7 +62,7 @@ body {
 }
 
 .imagem_navegacao {
-    width: 50px;
+    width: 75px;
 }
 
 .lista_nave {
@@ -70,17 +70,6 @@ body {
     display: flex;
     gap: 30px;
 }
-
-.itens_lista {
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.itens_lista:hover {
-    color: #00bcd4; 
-}
-
 
 #conteudo_principal {
     display: flex;
@@ -126,7 +115,10 @@ button a {
 }
 
 .cor_invetida:hover {
-    background-color: #eee;
+    background-color:  transparent;
+    color:  white;
+    border: 1px solid rgb(9, 184, 9);
+    transition:  background-color 0.5s, color 0.3s, border 0.5s;
 }
 
 .cor_padrao {
@@ -136,10 +128,12 @@ button a {
 }
 
 .cor_padrao:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color:  white;
+    color:  rgb(9, 184, 9);
+    border: 1px solid rgb(9, 184, 9);
+    transition:  background-color 0.5s, color 0.3s, border 0.5s;
 }
 
-/* Rodapé */
 #rodape {
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -154,8 +148,8 @@ button a {
 }
 
 #rodape img {
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.3s;
@@ -163,4 +157,51 @@ button a {
 
 #rodape img:hover {
     opacity: 1;
+}
+
+.lista_nave {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.itens_lista > a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.1em;
+    cursor: pointer;
+    display: inline-block; 
+    position: relative; 
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.itens_lista > a:hover {
+    color: rgb(10, 197, 10);
+    transition: color 0.5s;
+}
+
+.itens_lista > a::after {
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: #ffffff; 
+    transition: width 0s, background-color 0.3s; 
+}
+
+.itens_lista > a:hover::after {
+    width: 100%;
+    animation: drawLine 0.5s forwards; 
+}
+
+@keyframes drawLine {
+    0% {
+        width: 0; 
+    }
+    100% {
+        width: 100%;
+    }
 }
