@@ -46,7 +46,6 @@ body {
     flex-direction: column;
 }
 
-
 .navegacao {
     background-color: rgba(0, 0, 0, 0.7); 
     border-bottom: 1px solid rgb(255, 255, 255);
@@ -62,101 +61,7 @@ body {
 }
 
 .imagem_navegacao {
-    width: 75px;
-}
-
-.lista_nave {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-#conteudo_principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1; 
-    padding: 50px 20px;
-}
-
-#texto {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.nome {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-button a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.cor_invetida {
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-}
-
-.cor_invetida:hover {
-    background-color:  transparent;
-    color:  white;
-    border: 1px solid rgb(9, 184, 9);
-    transition:  background-color 0.5s, color 0.3s, border 0.5s;
-}
-
-.cor_padrao {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-}
-
-.cor_padrao:hover {
-    background-color:  white;
-    color:  rgb(9, 184, 9);
-    border: 1px solid rgb(9, 184, 9);
-    transition:  background-color 0.5s, color 0.3s, border 0.5s;
-}
-
-#rodape {
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-top: 1px solid rgb(255, 255, 255);
-}
-
-#rodape footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-#rodape img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-
-#rodape img:hover {
-    opacity: 1;
+    width:  100px;
 }
 
 .lista_nave {
@@ -204,4 +109,133 @@ button a {
     100% {
         width: 100%;
     }
+}
+
+#conteudo_principal {
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-around; 
+    flex-grow: 1; 
+    padding: 50px 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    width: 100%;
+}
+
+.bloco_texto {
+    max-width: 45%; 
+    text-align: left;
+}
+
+#texto {
+    font-size: 2em;
+    margin-bottom: 5px;
+    margin-left:  10px;
+    text-align: left;
+}
+
+.nome {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1aa305;
+    text-align: left;
+}
+
+.botoes {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.bloco_imagem {
+    width: 45%; 
+    text-align: center; 
+}
+
+.bloco_imagem img {
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 5px solid white; 
+    padding-bottom: 10px;
+}
+
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cor_invetida {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+
+.cor_invetida:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(9, 184, 9);
+    transition: background-color 0.5s, color 0.3s, border 0.5s;
+}
+
+.cor_padrao {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.cor_padrao:hover {
+    background-color: white;
+    color: rgb(9, 184, 9);
+    border: 1px solid rgb(9, 184, 9);
+    transition: background-color 0.5s, color 0.3s, border 0.5s;
+}
+
+
+
+#rodape {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 100%;
+}
+
+#rodape footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#rodape img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+#rodape img:hover {
+    opacity: 1;
+}
+
+#direita_texto{
+    position: absolute;
+    bottom:  77.6%;
+    left:  55%;
 }
