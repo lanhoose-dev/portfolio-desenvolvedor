@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: black;
-    color: rgb(255, 255, 255);
+    background-color: white; 
+    color: rgb(255, 255, 255); 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     height: 100vh;
@@ -35,7 +35,6 @@ body {
     object-fit: cover;
 }
 
-
 .content {
     position: relative;
     z-index: 1;  
@@ -43,12 +42,13 @@ body {
     height: 100%;
     overflow-y: auto; 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
+/* NAVEGAÇÃO */
 .navegacao {
-    background-color: rgba(0, 0, 0, 0.7); 
-    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-bottom: 1px solid rgb(255, 255, 255); 
     padding: 10px 20px;
 }
 
@@ -61,7 +61,8 @@ body {
 }
 
 .imagem_navegacao {
-    width:  100px;
+    width: 100px;
+    border: 3px solid rgb(9, 184, 9);
 }
 
 .lista_nave {
@@ -83,7 +84,6 @@ body {
 
 .itens_lista > a:hover {
     color: rgb(10, 197, 10);
-    transition: color 0.5s;
 }
 
 .itens_lista > a::after {
@@ -103,21 +103,18 @@ body {
 }
 
 @keyframes drawLine {
-    0% {
-        width: 0; 
-    }
-    100% {
-        width: 100%;
-    }
+    0% { width: 0; }
+    100% { width: 100%; }
 }
 
+/* CONTEÚDO PRINCIPAL */
 #conteudo_principal {
     display: flex; 
     flex-direction: row;
     align-items: center; 
     justify-content: space-around; 
     flex-grow: 1; 
-    padding: 50px 20px;
+    padding: 50px 20px 100px 20px; /* Adicionado padding inferior para não sobrepor o rodapé */
     max-width: 1200px; 
     margin: 0 auto; 
     width: 100%;
@@ -131,8 +128,9 @@ body {
 #texto {
     font-size: 2em;
     margin-bottom: 5px;
-    margin-left:  10px;
+    margin-left: 10px;
     text-align: left;
+    color: white;
 }
 
 .nome {
@@ -140,7 +138,7 @@ body {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #1aa305;
+    color: rgb(9, 184, 9);
     text-align: left;
 }
 
@@ -151,9 +149,9 @@ body {
 }
 
 .bloco_imagem {
-    padding-top:  10px;
+    padding-top: 10px;
     width: 45%; 
-    text-align: center; 
+    text-align: center;
 }
 
 .bloco_imagem img {
@@ -161,11 +159,11 @@ body {
     height: 250px;
     border-radius: 50%; 
     object-fit: cover;
-    border: 5px solid white; 
-    padding-bottom: 10px;
+    border: 5px solid rgb(9, 184, 9); 
+    padding-bottom: 0px;
 }
 
-
+/* BOTÕES */
 button {
     padding: 10px 20px;
     margin: 10px;
@@ -182,8 +180,8 @@ button a {
 }
 
 .cor_invetida {
-    background-color: white;
-    color: black;
+    background-color: white; 
+    color: black; 
     border: 1px solid white;
 }
 
@@ -191,29 +189,29 @@ button a {
     background-color: transparent;
     color: white;
     border: 1px solid rgb(9, 184, 9);
-    transition: background-color 0.5s, color 0.3s, border 0.5s;
 }
 
 .cor_padrao {
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: white; 
+    border: 1px solid white; 
 }
 
 .cor_padrao:hover {
     background-color: white;
     color: rgb(9, 184, 9);
     border: 1px solid rgb(9, 184, 9);
-    transition: background-color 0.5s, color 0.3s, border 0.5s;
 }
 
-
-
+/* RODAPÉ FIXO NO FINAL */
 #rodape {
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-top: 1px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-top: 1px solid rgb(255, 255, 255); 
     width: 100%;
+    position: absolute; /* Fixa no final do container .content */
+    bottom: 0;
+    left: 0;
 }
 
 #rodape footer {
@@ -227,16 +225,55 @@ button a {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s;
+    opacity: 1; /* Cor total */
+    filter: none; /* Cores padrões das imagens */
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 #rodape img:hover {
-    opacity: 1;
+    transform: scale(1.1); /* Efeito de zoom leve ao passar o mouse */
+    opacity: 0.8;
 }
 
-#direita_texto{
+#direita_texto {
     position: absolute;
-    bottom:  77.6%;
-    left:  55%;
+    bottom: 77.6%;
+    left: 55%;
+    color: white;
+}
+
+.hard-skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 20px 120px 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-skill {
+    background-color: rgba(255, 255, 255, 0.1); /* Efeito vidro */
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(9, 184, 9);
+    border-radius: 12px;
+    padding: 20px;
+    width: 160px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card-skill:hover {
+    transform: translateY(-10px);
+    background-color: rgba(9, 184, 9, 0.2);
+}
+
+.card-skill p {
+    font-weight: bold;
+    color: white;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.card-skill img{
+    width: 70px;
 }
